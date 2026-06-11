@@ -110,13 +110,31 @@ int main(){
         cout<<"\t"<<i+1<<"."<<user.station[i]<<endl;
     }
     // cin.ignore();
-    user.getdata();
-    user.getdistance();
-    user.getfare();
-    user.gettime();
-    cout<<endl;
-    cout<<"The distance between "<<user.fstation<<" and "<<user.lstation<<" is "<<user.dis<<"km"<<endl;
-    cout<<"The fare is - "<<user.fare<<"Rs"<<endl;
-    cout<<"The time it will take is "<<user.time<<"minutes"<<endl;
+    string userchoice;
+    while(true){
+    cout<<"Do you want to exit?(yes/no or y/n) - ";
+    cin>>userchoice;
+    if (userchoice=="yes"||userchoice=="y"||userchoice=="Yes")
+    {
+        cout<<endl;
+            cout << "=========================================" << endl<<endl;
+            cout << "     Thanks for using delhi metro !!"<<endl<<endl;
+            cout << "=========================================" << endl<<endl;
+            cout<<"Exiting...."<<endl;
+            exit(0);
+        
+    }
+    else{
+        user.getdata();
+        user.getdistance();
+        user.getfare();
+        user.gettime();
+        cout<<endl;
+        cout<<"The distance between "<<user.fstation<<" and "<<user.lstation<<" is "<<user.dis<<"km"<<endl;
+        cout<<"The fare is - "<<user.fare<<"Rs"<<endl;
+        cout<<"The time it will take is "<<user.time<<"minutes"<<endl;
+        
+    }
+}
     return 0;
 }
