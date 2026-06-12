@@ -130,10 +130,16 @@ int main(){
         user.getfare();
         user.gettime();
         cout<<endl;
+        if (user.findex!=-1&&user.lindex!=-1)
+        {
+            cout<<"the distance between "<<user.station[user.findex]<<" and "<<user.station[user.lindex]<<" is "<<user.dis<<"km"<<endl;
+        }
+        else{
         cout<<"The distance between "<<user.fstation<<" and "<<user.lstation<<" is "<<user.dis<<"km"<<endl;
+        }
         cout<<"The fare is - "<<user.fare<<"Rs"<<endl;
         cout<<"The time it will take is "<<user.time<<"minutes"<<endl;
-        
+        user.dis=0;
     }
 }
     return 0;
